@@ -37,4 +37,8 @@ export default class Pricing {
     }
     this._currency = newCurrency;
   }
+
+  static convertPrice(amount, conversionRate) {
+    return (amount * conversionRate);
+  }
 }
