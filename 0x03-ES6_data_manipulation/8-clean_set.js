@@ -5,7 +5,7 @@ export default function cleanSet(set, startString) {
   const str = [];
   set.forEach((item) => {
     if (item !== undefined && item.startsWith(startString)) {
-      const newItem item.slice(startString.length);
+      const newItem = item.slice(startString.length);
       str.push(newItem);
     }
   });
