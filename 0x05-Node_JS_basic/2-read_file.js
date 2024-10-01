@@ -36,4 +36,3 @@ module.exports = function countStudents(path) {
     console.log(`Number of students in ${field}: ${count}. List: ${students}`);
   }
 };
-  
