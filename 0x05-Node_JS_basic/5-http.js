@@ -35,8 +35,8 @@ const countStudents = (path) => new Promise((resolve, reject) => {
       let output = `Number of students: ${students.length}\n`;
       for (const field of Object.keys(fields)) {
         const { count } = fields[field];
-        const students = fields[field].students.join(', ');
-        output += `Number of students in ${field}: ${count}. List: ${students}\n`;
+        const studentsList = fields[field].students.join(', ');
+        output += `Number of students in ${field}: ${count}. List: ${studentsList}\n`;
       }
       resolve(output);
     }
@@ -60,6 +60,7 @@ const app = http.createServer((req, res) => {
       });
   }
 });
-app.listen(1245)
+
+app.listen(1245);
 
 module.exports = app;
