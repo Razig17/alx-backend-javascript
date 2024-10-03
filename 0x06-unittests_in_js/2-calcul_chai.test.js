@@ -33,7 +33,7 @@ describe('calculateNumber', function() {
     });
 
     it('should return 2 when inputs are (DIVIDE, 4.9, 2)', function() {
-      expect(calculateNumber('DIVIDE', 4.9, 2)).to.equal(2);
+      expect(calculateNumber('DIVIDE', 4.9, 2)).to.equal(2.5);
     });
   });
 
