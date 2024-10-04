@@ -1,3 +1,4 @@
+const e = require('express');
 const express = require('express');
 
 const app = express();
@@ -24,7 +25,11 @@ app.get('/available_payments', (req, res) => {
 
 app.post('/login', (req, res) => {
   const { userName } = req.body;
-  res.json(`Welcome ${userName}`);
+  if (!userName) {
+    res.status(400).send('Please provide a username');
+  } else {
+    res.json(`Welcome ${userName}`);
+  }
 });
 
 app.listen(7865, () => {
